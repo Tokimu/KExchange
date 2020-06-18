@@ -5,7 +5,6 @@ import io.dynamax.network.service.home.HomeService
 import io.dynamax.repository.mapper.ExchangeRatesMapper
 import kotlin.coroutines.CoroutineContext
 
-
 interface HomeRepository {
     suspend fun getLatestCurrencies(context: CoroutineContext, base: String): ExchangeRates
 }

@@ -3,7 +3,6 @@ package io.dynamax.core.utils
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 
 actual fun dispatch(withScope: CoroutineScope, mainDispatcher: CoroutineDispatcher, block: suspend CoroutineScope.() -> Unit) {
