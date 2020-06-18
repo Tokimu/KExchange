@@ -1,0 +1,34 @@
+# KExchange
+
+## Project overview
+
+This is Kotlin Multiplatform project.
+Shared code is split among many modules, where to goal was to keep as much as possible in the common code.
+As for now Kotlin Mulitplaform is an experimental feature. There are many bugs and limitations.
+Additionaly wanted to try to use Jetpack Compose and SwiftUI for displaying a simple UI (Views made by these frameworks doesn't meet their requirements for this task because of their limitiations for now)
+
+##### Know issues:
+- Kotlin Multiplatform project with mulitple muliplatform modules doesn't work well with the current Android Studio
+(Syntax highlighting doesn't work correctly, need to rebuild single modules to see changes in other modules, gradle parallel build mode doesn't work... etc)
+- For iOS Coroutines works on a main thread
+- Ktor client for iOS has a know issue with memory leak
+- Compose doesn't work inside KMP module
+- Compose and SwiftUI are still quite buggy and perfomance of the list view is not the best
+
+### Architecture
+
+Architecture used for this project is redux.
+Used framework: https://github.com/reduxkotlin/redux-kotlin
+
+## How to run
+##### Requirements:
+ - Android Studio 4.2 Canary 1
+ - For iOS, Xcode
+
+Android app can be run like always.
+To use compose view please uncomment Inent-filter for MainActivity and comment out the one in home feature module.
+
+To run iOS:
+ - Framework should be already generated and included into iOS project
+ - To generate new XCFramework just build the project, framework should get generated after ssuccessfull build.
+ - iOS App is definitely not production ready as of the current know issues listed above, with relase of Kotlin 1.4 it should change
