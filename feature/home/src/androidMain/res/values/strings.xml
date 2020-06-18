@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_title">Rates</string>
+    <string name="rate_item_hint">0.0</string>
+    <string name="no_data_label">No data…</string>
+    <string name="check_connection">Check your internet connection</string>
+</resources>
